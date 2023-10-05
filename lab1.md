@@ -30,13 +30,13 @@ The working directory did not change, and is still `/home`. The output listed th
 
 ![Image](ls_directory.png)
 
-The working directory was `/home/lecture1/`. The outputs were `messages`, `Hello.java`, and `README` which are the files within the `lecture1` folder. Therefore, there was an output and it was not an error.
+The working directory was `/home` because there was no change in directory. The outputs were `messages`, `Hello.java`, and `README` which are the files within the `lecture1` folder. Therefore, there was an output and it was not an error.
 
 3) `ls lecture1/messages/en-us.txt` 
 
 ![Image](ls_file.png)
 
-The working directory is `/home/lecture1/en-us.txt` itself. The output is the file path. While not an error, the output is such because there is nothing below the file.
+The working directory is again, `/home`. The output is the file path. While not an error, the output is such because there is nothing below the file.
 
 ## `cat` command
 1) `cat`
@@ -49,10 +49,10 @@ The working directory during the execution of the code was `/home`. The `cat` co
 
 ![Image](cat_directory.png)
 
-The working directory during the execution of the code was `/home/lecture1/`. The output is simply stating an error that the working directory is a path to a folder, which is not a file.
+The working directory during the execution of the code was `/home`. The output is simply stating an error that the path provided is to a folder, which is not a file.
 
 3) `cat lecture/messages/en-us.txt`
 
 ![Image](cat_file.png)
 
-The working directory during the execution of the code was `/home/lecture1/messages/en-us.txt`. The output that is printed is the contents within the file `en-us.txt`. Since this is a path to a file with readable contents, there was not an error this time.
+The working directory during the execution of the code was `/home`. The output that is printed is the contents within the file `en-us.txt`. Since this is a path to a file with readable contents, there was not an error this time.
