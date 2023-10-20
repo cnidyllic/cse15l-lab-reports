@@ -1,58 +1,92 @@
-# Lab Report 1 
+## Lab Report 1
 
-## `cd` command
-1) `cd`
+### `cd` command
 
-![Image](cd_noarg.png)
+1. **Using the command with no arguments**
 
-The working directory was `/home` when the code was run. There was no output as the `cd` command is intended to change the working directory. Moreover, the code ran fine and produced no errors.
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/4e0e8107-9d18-4038-b891-b1e5e430a5eb)
 
-2) `cd lecture1`
+- Working Directory: `/home`
+- When `cd` is executed with no arguments, it changes the working directory to the user's home directory, in this case, `/home`.
 
-![Image](cd_directory.png)
+2. **Using the command with a path to a directory**
 
-The working directory changed to `/home/lecture1` after the code was ran. The `cd` command was used to changed the directory so it did what it was meant to do. There was no output nor error.
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/886c39f9-14eb-4436-94d3-9b591a7c1b62)
 
-3) `cd /home/lecture1/messages/en-us.txt`
+- Working Directory: `/home/lecture1`
+- There was no output as the `cd` command successfully changed the directory to `lecture1`.
 
-![Image](cd_file.png)
+3. **Using the command with a path to a file (Incorrect usage)**
 
-The working directory during the execution of the code was `/home/lecture1/messages/en-us.txt`. The output was an error because the `cd` command is only meant to be used to change paths to directories, not files.
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/08ca60fe-6878-457d-bd29-ec6b245a4ab6)
 
-## `ls` command
-1) `ls`
+- Working Directory: `/home`
+- The working directory remained at `/home`. The output indicates an error because the `cd` command is used for changing to directories, and the provided path points to a file.
 
-![Image](ls_noarg.png)
+---
 
-The working directory did not change, and is still `/home`. The output listed the directory `lecture1`, which was immediately below the working directory. The command ran fine and did not produce an error.
+### `ls` command
 
-2) `ls lecture1`
+1. **Using the command with no arguments**
 
-![Image](ls_directory.png)
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/539e2c51-1f70-4268-99da-ff096725ecdf)
 
-The working directory was `/home` because there was no change in directory. The outputs were `messages`, `Hello.java`, and `README` which are the files within the `lecture1` folder. Therefore, there was an output and it was not an error.
+- Working Directory: `/home`
+- The command listed the directory `lecture1`, which is located under the current working directory `home`.
 
-3) `ls lecture1/messages/en-us.txt` 
+2. **Using the command with a path to a directory**
 
-![Image](ls_file.png)
+```bash
+[user@sahara ~]$ ls lecture1
+Hello.class Hello.java messages README
+```
 
-The working directory is again, `/home`. The output is the file path. While not an error, the output is such because there is nothing below the file.
+- Working Directory: `/home`
+- The command listed the files within the `lecture1` directory.
 
-## `cat` command
-1) `cat`
+3. **Using the command with a path to a file**
 
-![Image](cat_noarg.png)
+```bash
+[user@sahara ~]$ ls lecture1/messages/en-us.txt
+lecture1/messages/en-us.txt
+```
 
-The working directory during the execution of the code was `/home`. The `cat` command is meant to print out the content within a file. While there was no error, there was also no output because the working directory does not have a path to such file.
+- Working Directory: `/home`
+- The output simply shows the path to the file.
 
-2) `cat lecture1`
+---
 
-![Image](cat_directory.png)
+### `cat` command
 
-The working directory during the execution of the code was `/home`. The output is simply stating an error that the path provided is to a folder, which is not a file.
+1. **Using the command with no arguments**
 
-3) `cat lecture/messages/en-us.txt`
+```bash
+[user@sahara ~]$ cat
+```
 
-![Image](cat_file.png)
+- Working Directory: `/home`
+- Note: When `cat` is run without arguments, it will read from standard input. Pressing `CTRL + D` can be used to signal the end of the input.
 
-The working directory during the execution of the code was `/home`. The output that is printed is the contents within the file `en-us.txt`. Since this is a path to a file with readable contents, there was not an error this time.
+2. **Using the command with a path to a directory (Incorrect usage)**
+
+```bash
+[user@sahara ~]$ cat lecture1
+cat: lecture1: Is a directory
+```
+
+- Working Directory: `/home`
+- The output is an error since the `cat` command expects a file and not a directory.
+
+3. **Using the command with a path to a file**
+
+```bash
+[user@sahara ~]$ cat lecture1/messages/en-us.txt
+Hello World!
+```
+
+- Working Directory: `/home`
+- The output displays the contents of the file `en-us.txt`.
+
+---
+
+You can now apply the feedback provided in the annotations to correct any mistakes or make improvements. If there's any other modification you'd like, let me know!
