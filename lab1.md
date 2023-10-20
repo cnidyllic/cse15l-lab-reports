@@ -32,27 +32,21 @@
 ![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/539e2c51-1f70-4268-99da-ff096725ecdf)
 
 - Working Directory: `/home`
-- The command listed the directory `lecture1`, which is located under the current working directory `home`.
+- The command listed the directory `lecture1`, which is located under the current working directory `/home`.
 
 2. **Using the command with a path to a directory**
 
-```bash
-[user@sahara ~]$ ls lecture1
-Hello.class Hello.java messages README
-```
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/8d707930-e451-424a-a166-849f3384c619)
 
 - Working Directory: `/home`
 - The command listed the files within the `lecture1` directory.
 
 3. **Using the command with a path to a file**
 
-```bash
-[user@sahara ~]$ ls lecture1/messages/en-us.txt
-lecture1/messages/en-us.txt
-```
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/202fe3a6-8e85-4630-9557-217cff54ca03)
 
 - Working Directory: `/home`
-- The output simply shows the path to the file.
+- The output is the path to the file specified, which is not an error. Typically, the ls command lists the contents of a directory, but when given a file path as an argument, it simply prints the path.
 
 ---
 
@@ -60,33 +54,21 @@ lecture1/messages/en-us.txt
 
 1. **Using the command with no arguments**
 
-```bash
-[user@sahara ~]$ cat
-```
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/c619a758-1d4d-4846-8ade-46b4e59a6b53)
 
 - Working Directory: `/home`
-- Note: When `cat` is run without arguments, it will read from standard input. Pressing `CTRL + D` can be used to signal the end of the input.
+- The cat command without arguments waits for input. It is in a listening state, and you can exit this state by pressing CTRL + C or by providing input followed by CTRL + D.
 
 2. **Using the command with a path to a directory (Incorrect usage)**
 
-```bash
-[user@sahara ~]$ cat lecture1
-cat: lecture1: Is a directory
-```
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/8b1b2e02-03b4-49bb-832f-d8387e0f46c1)
 
 - Working Directory: `/home`
-- The output is an error since the `cat` command expects a file and not a directory.
+- The output is an error since the cat command expects a file and not a directory.
 
 3. **Using the command with a path to a file**
 
-```bash
-[user@sahara ~]$ cat lecture1/messages/en-us.txt
-Hello World!
-```
+![image](https://github.com/cnidyllic/cse15l-lab-reports/assets/146884284/fa4cfcd7-1c09-4cc8-83fd-e1c7a2b43f32)
 
 - Working Directory: `/home`
 - The output displays the contents of the file `en-us.txt`.
-
----
-
-You can now apply the feedback provided in the annotations to correct any mistakes or make improvements. If there's any other modification you'd like, let me know!
